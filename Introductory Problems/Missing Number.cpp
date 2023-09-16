@@ -7,17 +7,17 @@ int main() {
 
     long long total_sum = (long long)n * (n + 1) / 2; 
 
-    long long sum_of_given_numbers = 0;
+    long long given_sum = 0;
 
     for (int i = 1; i < n; i++) {
         int x;
         cin >> x;
-        sum_of_given_numbers += x;
+        given_sum += x;
     }
 
-    long long missing_number = total_sum - sum_of_given_numbers;
+    long long num = total_sum - given_sum;
 
-    cout << missing_number;
+    cout << num;
 
     return 0;
 }

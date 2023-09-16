@@ -3,25 +3,25 @@
 using namespace std;
 
 int main() {
-    string dna_sequence;
-    cin >> dna_sequence;
+    string arr;
+    cin >> arr;
 
-    int n = dna_sequence.length();
-    int max_repetition = 1;
-    int current_repetition = 1;
+    int n = arr.length();
+    int max_arr = 1;
+    int current = 1;
 
     for (int i = 1; i < n; i++) {
-        if (dna_sequence[i] == dna_sequence[i - 1]) {
-            current_repetition++;
+        if (arr[i] == arr[i - 1]) {
+            current ++;
         } else {
-            max_repetition = max(max_repetition, current_repetition);
-            current_repetition = 1; 
+            max_arr = max(max_arr, current);
+            current = 1; 
         }
     }
 
-    max_repetition = max(max_repetition, current_repetition); 
+    max_arr = max(max_arr, current); 
 
-    cout << max_repetition << endl;
+    cout << max_arr << endl;
 
     return 0;
 }
